@@ -8,7 +8,7 @@ f5 = 0
 s6 = 0
 s7 = 0
 e8 = 0
-while ex < 1000001:
+while ex < 1000000:
     l = 1; r = 100
     n = (l + r)  //  2
     num = random.randint(l, r)
