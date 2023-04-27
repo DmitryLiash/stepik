@@ -1,4 +1,6 @@
 import random
+import time 
+start = time.time()
 ex = 0
 f1 = 0
 s2 = 0 
@@ -40,4 +42,6 @@ while ex < 1000000:
             elif c == 8:
                 e8 += 1
             break
+end = time.time() - start
 print(f"1-{f1}_2-{s2}_3-{t3}_4-{f4}_5-{f5}_6-{s6}_7-{s7}_8-{e8}")
+print(f"Потраченно времени {end} мин.")
