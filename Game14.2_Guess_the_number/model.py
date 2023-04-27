@@ -34,13 +34,22 @@ def enother_lvl_random() -> int:
     print(f"У тебя {value} попыток")
     return value
 
+def is_valid(s):
+    return s.isdigit() and 1 <= int(s) <= 100
+
+def is_valid_num():
+    while True:
+        n = input('Введите число: ')
+        if is_valid(n):
+            return int(n)
+        print('А может быть все-таки введем целое число от 1 до 100?')
 
 def game(lvl: int):
     value = random.randrange(101)
     count = 0
     while count < lvl:
         print()
-        user_value = int(input('Введите число: '))
+        user_value = is_valid_num()
         if user_value == value:
             return True, value
         elif user_value > value:
